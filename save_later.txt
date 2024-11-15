@@ -1,0 +1,22 @@
+<table>
+					<thead>
+						<tr>
+							<th class="fragment" data-fragment-index="1">Pretraining</th>
+							<th class="fragment"data-fragment-index="2">Fine-tuning</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="fragment" data-fragment-index="3">Apples</td>
+							<td class="fragment" data-fragment-index="5">$1</td>
+						</tr>
+						<tr>
+							<td class="fragment" data-fragment-index="4">Lemonade</td>
+							<td>$2</td>
+						</tr>
+						<tr>
+							<td>Bread</td>
+							<td>$3</td>
+						</tr>
+					</tbody>
+				</table>

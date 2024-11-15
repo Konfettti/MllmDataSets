@@ -1,40 +1,713 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Multimodal Datasets</h1>
+				<p class="fragment">by Johannes Kunath</p>
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="header">Structure</h2>
+				<li>
+					<p data-id="question1" class="fragment fade-in-then-semi-out" data-fragment-index="1">What kind
+						of multimodal
+						datasets exist?</p>
+				</li>
+				<li class="fragment fade-in-then-semi-out" data-fragment-index="2">
+					<p>What tasks do they contain?</p>
+				</li>
+				<li class="fragment fade-in-then-semi-out" data-fragment-index="3">
+					<p>How are they created?</p>
+				</li>
+				<li class="fragment fade-in-then-semi-out" data-fragment-index="4">
+					<p>Which data mixtures are recommended for multimodal instruction-tuning?</p>
+				</li>
+				<li class="fragment fade-in-then-semi-out" data-fragment-index="5">
+					<p>How to evaluate your dataset?</p>
+				</li>
+				<ul>
+			</section>
+
+
+			<section data-auto-animate>
+				<p data-id="question1" class="r-fit-text">What kind of multimodal datasets exist?</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Pretraining Datasets</h1>
+			</section>
+			<section>
+				<section data-auto-animate>
+					<h1>Fine-Tuning Datasets</h1>
+					<h1>Pretraining Datasets</h1>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="fine">Fine-Tuning Datasets</h1>
+				<ul>
+					<aside class="notes">
+						For instance, a multimodal dataset in medical imaging and
+						descriptions could be used if the goal is to develop a model for medical diagnostics.
+					</aside>
+
+					<li class="fragment grow" data-fragment-index="1">
+						Smaller dataset tailored to a particular task
+					</li>
+
+					<aside class="notes">
+						The goal here is to adapt the previously learned knowledge to focus on the specific features and
+						requirements of the new dataset.
+					</aside>
+
+					<li class="fragment grow" data-fragment-index="2">
+						Adapt the previously learned knowledge to focus on the specific requirements
+					</li>
+					<li class="fragment grow" data-fragment-index="3">
+						teaches the model to concentrate on details relevant to the specific task and ignore unnecessary
+					</li>
+
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.container {
+						display: flex;
+					}
+
+					.col {
+						flex: 1;
+					}
+				</style>
+
+				<h1 data-id="fine">Fine-Tuning Datasets</h1>
+
+				<div class="container">
+
+					<div class="col">
+						<div class="r-stack">
+							<img class="fragment fade-out" data-fragment-index="0" src="pictures/OBELICS_IDEFICS.png"
+								width="450" height="450" />
+							<img class="fragment current-visible" data-fragment-index="0" src="pictures/SEED-163K.png"
+								width="450" height="450" />
+							<img class="fragment" data-fragment-index="1" src="pictures/CheXpert.webp" width="450"
+								height="450" />
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="r-stack">
+							<p class="fragment fade-out" data-fragment-index="0">
+								Docmatix for Document VQA used for fine-tuning Idefics3</p>
+							<p class="fragment current-visible" data-fragment-index="0">
+								SEED-163K used for tuning MMEvol</p>
+							<p class="fragment" data-fragment-index="1">CheXpert for x-ray image analysis</p>
+						</div>
+						<div class="r-stack">
+							<p class="fragment fade-out" data-fragment-index="0">
+								9.000.000 Q/A pairs</p>
+							<p class="fragment" data-fragment-index="1">224,316 chest radiographs</p>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="fine">Pretraining Datasets</h1>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="fine">Pretraining Datasets</h1>
+				<ul>
+					<li class="fragment grow" data-fragment-index="1">
+						Large, diverse, general dataset containing multipele modalities
+					</li>
+
+					<aside class="notes">
+						In pretuning, models are trained on large,
+						general datasets that often contain multiple modalities,
+						such as millions of images with captions, text corpora, videos, and/or audio files
+					</aside>
+
+					<li class="fragment grow" data-fragment-index="2">
+						Learn basic patterns, features and relationships across modalities
+					</li>
+
+					<aside class="notes">
+						The goal is for the model to learn basic patterns, features, and relationships across different
+						modalities.
+						For a multimodal model, this means understanding how information from one modality,
+						like text, corresponds to another modality, like images—for example,
+						identifying which words match certain visual features.
+					</aside>
+				</ul>
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					<style>
+						.container {
+							display: flex;
+						}
+
+						.col {
+							flex: 1;
+						}
+					</style>
+
+					<h1 data-id="fine">Pretraining Datasets</h1>
+
+					<div class="container">
+
+						<div class="col">
+							<img src="pictures/Laion.jpg" width="450" height="450" />
+						</div>
+
+						<div class="col">
+							<p> Laion-5B Open-Source</p>
+
+							<p data-id="laion">5.800.000.000 image-text pairs</p>
+						</div>
+
+					</div>
+				</section>
+
+				<section data-auto-animate>
+					<p data-id="laion">Image-Text pairs</p>
+					<img src="pictures/Image-text_pair.png" width="450" height="450" />
+				</section>
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					<style>
+						.container {
+							display: flex;
+						}
+
+						.col {
+							flex: 1;
+						}
+					</style>
+
+					<h1 data-id="fine">Pretraining Datasets</h1>
+
+					<div class="container">
+
+						<div class="col">
+							<img src="pictures/OBELICS_IDEFICS.png" width="450" height="450" />
+						</div>
+
+						<div class="col">
+							<ul>
+								<li>
+									<p>OBELICS</p>
+								</li>
+								<li>
+									<p>115B Texttokens 353M Images</p>
+								</li>
+								<li>
+									<p data-id="Interleaved">Interleaved image-text web documents</p>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section data-auto-animate>
+					<p data-id="Interleaved">Interleaved Image-Text</p>
+					<style>
+						.container {
+							display: flex;
+						}
+
+						.col {
+							flex: 1;
+						}
+					</style>
+
+					<div class="container">
+
+						<div class="col">
+							<img src="pictures/Interleaved.png" width="450" height="450" />
+						</div>
+
+						<div class="col">
+							<ul>
+								<li>
+									<p> capture visual-textual associations within context of documents</p>
+								</li>
+								<li>
+									<p> Efficient Learning with Less Data</p>
+								</li>
+							</ul>
+						</div>
+						<aside class="notes">
+							Efficient Learning with Less Data: Training on interleaved image-text documents enables
+							models to
+							achieve similar or superior performance with fewer training images. This efficiency is
+							attributed to the
+							fact that the longer text passages
+							accompanying images in interleaved formats offer richer semantic information, leading to
+							faster and more robust learning.
+
+							Competitive Benchmarking: The IDEFICS models trained on OBELICS exhibit competitive
+							performance against closed, proprietary models like Flamingo,
+							often matching or surpassing them on open-source multimodal benchmarks. This suggests that
+							interleaved image-text datasets could be a
+							powerful tool for creating high-quality, open multimodal models.
+						</aside>
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+					<li>
+						<p class="grey-out">What kind
+							of multimodal
+							datasets exist?</p>
+					</li>
+					<li data-id="question2" class="grow">
+						<p>What tasks do they contain?</p>
+					</li>
+					<li class="grey-out">
+						<p>How are they created?</p>
+					</li>
+					<li class="grey-out">
+						<p>Which data mixtures are recommended for multimodal instruction-tuning?</p>
+					</li>
+					<li class="grey-out">
+						<p>How to evaluate your dataset?</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question2" style="font-size: 77px;">
+					What tasks do they contain?
+				</p>
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="task">Image Captioning</h2>
+				<img src="pictures/image_captioning.png" width="685" height="288" />
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="task">OCR (Optical Character Recognition)</h2>
+				<img src="pictures/OCR.png" width="602" height="360" />
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="task">VQA (Visual Question Answering)</h2>
+				<img src="pictures/VQA.jpg" width="900" height="506" />
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+				</ul>
+				<li>
+					<p class="grey-out">What kind
+						of multimodal
+						datasets exist?</p>
+				</li>
+				<li data-id="question2" class="grey-out">
+					<p>What tasks do they contain?</p>
+				</li>
+				<li data-id="question3" class="grow">
+					<p>How are they created?</p>
+				</li>
+				<li class="grey-out">
+					<p>Which data mixtures are recommended for multimodal instruction-tuning?</p>
+				</li>
+				<li class="grey-out">
+					<p>How to evaluate your dataset?</p>
+				</li>
+				<ul>
+
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 77px;">How are they created?</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Synthetic</h1>
+			</section>
+			<section>
+				<section data-auto-animate>
+					<h1>Synthetic</h1>
+					<h1 data-id="crawled">Crawled</h1>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="crawled">Crawled Data</h1>
+				<ul>
+					<li>
+						Information collected by web crawlers
+					</li>
+					<li>
+						Different Scope and Type of Data
+						<ul>
+							<li>Common Crawl</li>
+							<li>Specialized Crawls</li>
+							<li>Focused Crawls</li>
+							<li>Vertical Crawls</li>
+							<li>Real-Time Crawls</li>
+							<li>And many more</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<!-- Slide 1: Original View -->
+			<section data-auto-animate>
+				<h1 data-id="crawled">Crawled Data</h2>
+					<p>Example: OBELICS</p>
+					<div id="zoom-target">
+						<!-- Some visual element to zoom into -->
+						<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="800px">
+					</div>
+			</section>
+
+			<!-- Slide 2: Zoomed-In View -->
+			<section data-transition="zoom-in fade-out" data-auto-animate>
+				<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
+				<p>simplified Version</p>
+				<img src="pictures/DomTree.jpg" alt="Dom_Tree" width="1000px" height="500px">
+			</section>
+
+			<!-- Slide 3: Zoomed-In View -->
+			<section data-auto-animate>
+				<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
+				<img src="pictures/Dom-Tree_cleaned.jpg" alt="Dom_Tree_cleaned" width="1000px" height="500px">
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="Result_Data">Crawled</h2>
+				<p>Example: OBELICS</p>
+				<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="600px">
+				<p class="fragment">0.3% of Docs left... but Quantity ≠ Quality</p>
+
+				<aside class="notes">
+					Longer Training Times
+				</aside>
+
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="Result_Data">Resulting Data</h2>
+				<style>
+					.container {
+						display: flex;
+					}
+
+					.col {
+						flex: 1;
+					}
+				</style>
+
+				<div class="container">
+					<div class="col">
+						<img src="pictures/Interleaved.png" width="450" height="450" />
+					</div>
+
+					<div class="col">
+						<img src="pictures/Image-text_pair.png" width="450" height="450" />
+					</div>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="Result_Data">Synthetic Data</h1>
+				<ul>
+					<li>
+						Artificially generated collection of data
+					</li>
+					<li>
+						Achieves more control Over Data Characteristics
+					</li>
+					<li>
+						Scalability and Cost Efficiency
+					</li>
+					<li>
+						Challenges with Data Realism
+					</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="Result_Data">Synthetic Data</h2>
+					<h2 data-id="exmaple">Example: MMEvol with SEED-163K</p>
+						<div id="zoom-target">
+							<!-- Some visual element to zoom into -->
+							<img src="pictures/evo_example_page-0001.jpg" alt="CommonCrawl" width="600px">
+						</div>
+			</section>
+
+			<!-- Slide 2: Zoomed-In View -->
+			<section data-transition="zoom-in fade-out" data-auto-animate>
+				<h2 data-id="Dom_Tree_Cleaner">MMEvol with SEED-163K</h2>
+				<p>Increased complexity</p>
+				<style>
+					.container {
+						display: flex;
+					}
+
+					.col {
+						flex: 1;
+					}
+				</style>
+
+				<div class="container">
+					<div class="col">
+						<img src="pictures/data_analysis_1_page-0001.jpg" width="550" height="400" />
+					</div>
+
+					<div class="col">
+						<img src="pictures/evolved_data.png" width="550" height="400" />
+					</div>
+				</div>
+				<aside class="notes">
+					Can introduce noise of VQA are syntheticly created
+
+					Human-in-the-Loop und Feedback-getriebene Ansätze:
+					Zur Sicherung der Datenqualität und -vielfalt werden auch menschliche Rückmeldungen genutzt,
+					wie in OmniCorpus und OBELICS beschrieben. Hierbei werden irrelevante Inhalte entfernt und eine
+					hohe sprachliche Qualität der Daten gewährleistet
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+					<li>
+						<p class="grey-out">What kind
+							of multimodal
+							datasets exist?</p>
+					</li>
+					<li class="grey-out">
+						<p>What tasks do they contain?</p>
+					</li>
+					<li class="grey-out">
+						<p>How are they created?</p>
+					</li>
+					<li data-id="question3" class="grow">
+						<p>Which data mixtures are recommended for multimodal instruction-tuning?</p>
+					</li>
+					<li class="grey-out">
+						<p>How to evaluate your dataset?</p>
+					</li>
+
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 50px;">Which data mixtures are recommended for multimodal
+					instruction-tuning?</p>
+
+				<img src="pictures/Instruction_Tuning.png" width="500" height="500" />
+
+				<aside class="notes">
+					Instruction tuning refers to the process of fine-tuning a machine learning model, particularly
+					language models,
+					to improve its ability to follow specific instructions. This is done by training the model on
+					datasets
+					that include various examples of tasks presented in the form of instructions, along with the
+					appropriate responses
+					or outputs. The goal is to enhance the model's performance on a wide range of tasks, ensuring it
+					responds accurately
+					and in the way a user would expect when given a command or question.
+				</aside>
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					<p data-id="question3" style="font-size: 50px;">Dataset requirements</p>
+					<ul>
+						<li>
+							<p>High Diversity and Variety in Data Sources</p>
+						</li>
+						<li>
+							<p>Combining Different modalities</p>
+						</li>
+						<li>
+							<p data-id="task_var">Combining Different Task Types enhance the versatility</p>
+						</li>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<p data-id="task_var">Eample on task distrubution</p>
+					<img src="pictures/mixture_the_cauldron.png" width="1000" height="300" />
+					<!-- @todo add something to show dist -->
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+					<li>
+						<p class="grey-out">What kind
+							of multimodal
+							datasets exist?</p>
+					</li>
+					<li class="grey-out">
+						<p>What tasks do they contain?</p>
+					</li>
+					<li class="grey-out">
+						<p>How are they created?</p>
+					</li>
+					<li class="grey-out">
+						<p>Which data mixtures are recommended for multimodal instruction-tuning?</p>
+					</li>
+					<li class="grow" data-id="question4">
+						<p>How to evaluate your dataset?</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 77px;">How to evaluate your dataset?</p>
+			</section>
+
+
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 50px;">How to evaluate your dataset?</p>
+				<p>Evaluation metrics</p>
+				<ul>
+					<li>
+						<p>Data Quality Assessment</p>
+					</li>
+					<li>
+						<p>Source Diversity</p>
+					</li>
+					<li>
+						<p>Data Processing Pipeline</p>
+					</li>
+					<li>
+						<p>Dataset Format and Flexibility</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 50px;">Exmaple: OmniCorps</p>
+				<ol>
+					<li>
+						Assinges Scores to all the steps of creating a dataset
+					</li>
+					<li>
+						Trains a MM-LLM in a standardized procedure
+					</li>
+					<li>
+						Evaluates the MM-LLM on commen MM-bechmarks
+					</li>					
+				</ol>
+			</section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/zoom/zoom.min.js"></script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			progress: true,
+			autoAnimateDuration: 1.3,
+			controls: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom]
+		});
+	</script>
+</body>
+
 </html>
