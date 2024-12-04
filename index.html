@@ -76,14 +76,15 @@
 						Adapt the previously learned knowledge to focus on the specific requirements
 					</li>
 					<li>
-						teaching the model to concentrate on details relevant to the specific task and ignore unnecessary
+						teaching the model to concentrate on details relevant to the specific task and ignore
+						unnecessary
 					</li>
 
 				</ul>
 			</section>
 
 
-			<section data-auto-animate>
+			<!-- <section data-auto-animate>
 				<style>
 					.container {
 						display: flex;
@@ -94,7 +95,7 @@
 					}
 				</style>
 
-				<!-- <h1 data-id="fine">Fine-Tuning Datasets</h1>
+				<h1 data-id="fine">Fine-Tuning Datasets</h1>
 
 				<div class="container">
 
@@ -117,6 +118,72 @@
 				</div>
 			</section> -->
 
+			<section data-auto-animate>
+				<style>
+					.container {
+						display: flex;
+					}
+
+					.col {
+						flex: 1;
+					}
+				</style>
+
+				<h1 data-id="fine">Fine-Tuning Datasets</h1>
+
+				<div class="container">
+
+					<div class="col">
+						<div class="r-stack">
+							<img src="pictures/CheXpert.webp" width="450" height="450" />
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="r-stack">
+							<p>CheXpert for x-ray image analysis</p>
+						</div>
+						<div class="r-stack">
+							<p>224,316 chest radiographs</p>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+
+			<section data-auto-animate>
+				<h1 data-id="fine">Pretraining Datasets</h1>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="fine">Pretraining Datasets</h1>
+				<ul>
+					<li>
+						Large, diverse, general dataset containing multiple modalities
+					</li>
+
+					<aside class="notes">
+						millions of images with captions, text corpora, videos audio files
+					</aside>
+
+					<aside class="notes">
+						align the backbone
+						robustness againstout-of-domain data.
+					</aside>
+
+					<li>
+						Learn basic patterns, features and relationships across modalities
+					</li>
+
+					<aside class="notes">
+						correspondence to another modality.
+					</aside>
+				</ul>
+			</section>
+
+			<section>
 				<section data-auto-animate>
 					<style>
 						.container {
@@ -128,294 +195,127 @@
 						}
 					</style>
 
-					<h1 data-id="fine">Fine-Tuning Datasets</h1>
+					<h1 data-id="fine">Pretraining Datasets</h1>
 
 					<div class="container">
 
 						<div class="col">
-							<div class="r-stack">
-								<img src="pictures/CheXpert.webp" width="450" height="450" />
-							</div>
+							<img src="pictures/Laion.jpg" width="450" height="450" />
 						</div>
 
 						<div class="col">
-							<div class="r-stack">
-								<p>CheXpert for x-ray image analysis</p>
-							</div>
-							<div class="r-stack">
-								<p>224,316 chest radiographs</p>
-							</div>
+							<p> Laion-5B Open-Source</p>
 
+							<p data-id="laion">5.800.000.000 image-text pairs</p>
 						</div>
 
 					</div>
 				</section>
 
-
 				<section data-auto-animate>
-					<h1 data-id="fine">Pretraining Datasets</h1>
+					<p data-id="laion">Image-Text pairs</p>
+					<img src="pictures/Image-text_pair.png" width="450" height="450" />
 				</section>
+			</section>
 
-				<section data-auto-animate>
-					<h1 data-id="fine">Pretraining Datasets</h1>
-					<ul>
-						<li>
-							Large, diverse, general dataset containing multiple modalities
-						</li>
-
-						<aside class="notes">
-							millions of images with captions, text corpora, videos audio files
-						</aside>
-
-						<aside class="notes">
-							primary goal of pre-training is to align the backbone
-							large-scale datasets improve robustness against
-							out-of-domain
-							data.
-						</aside>
-
-						<li>
-							Learn basic patterns, features and relationships across modalities
-						</li>
-
-						<aside class="notes">
-							correspondence to another modality.
-						</aside>
-					</ul>
-				</section>
-
-				<section>
-					<section data-auto-animate>
-						<style>
-							.container {
-								display: flex;
-							}
-
-							.col {
-								flex: 1;
-							}
-						</style>
-
-						<h1 data-id="fine">Pretraining Datasets</h1>
-
-						<div class="container">
-
-							<div class="col">
-								<img src="pictures/Laion.jpg" width="450" height="450" />
-							</div>
-
-							<div class="col">
-								<p> Laion-5B Open-Source</p>
-
-								<p data-id="laion">5.800.000.000 image-text pairs</p>
-							</div>
-
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<p data-id="laion">Image-Text pairs</p>
-						<img src="pictures/Image-text_pair.png" width="450" height="450" />
-					</section>
-				</section>
-
-				<section>
-					<section data-auto-animate>
-						<style>
-							.container {
-								display: flex;
-							}
-
-							.col {
-								flex: 1;
-							}
-						</style>
-
-						<h1 data-id="fine">Pretraining Datasets</h1>
-
-						<div class="container">
-
-							<div class="col">
-								<img src="pictures/OBELICS_IDEFICS.png" width="450" height="450" />
-							</div>
-
-							<div class="col">
-								<ul>
-									<li>
-										<p>OBELICS</p>
-									</li>
-									<li>
-										<p>115B Text tokens 353M Images</p>
-									</li>
-									<li>
-										<p data-id="Interleaved">Interleaved image-text web documents</p>
-									</li>
-
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<p data-id="Interleaved">Interleaved Image-Text</p>
-						<style>
-							.container {
-								display: flex;
-							}
-
-							.col {
-								flex: 1;
-							}
-						</style>
-
-						<div class="container">
-
-							<div class="col">
-								<img src="pictures/Interleaved.png" width="450" height="450" />
-							</div>
-
-							<div class="col">
-								<ul>
-									<li>
-										<p> capture visual-textual associations within context of documents</p>
-									</li>
-									<li>
-										<p> Efficient Learning with Less Data</p>
-									</li>
-								</ul>
-							</div>
-							<aside class="notes">
-								longer text passages
-								richer semantic information, leading to
-								faster and more robust learning.
-								Competitive Benchmarking: IDEFICS
-						</div>
-					</section>
-				</section>
-
+			<section>
 				<section data-auto-animate>
 					<style>
-						.grow {
-							transform: scale(1);
-							transition: transform 1.3s ease-in-out;
+						.container {
+							display: flex;
 						}
 
-						.reveal .present .grow {
-							transform: scale(1.4);
-						}
-
-						.grey-out {
-							color: rgb(77, 74, 74);
+						.col {
+							flex: 1;
 						}
 					</style>
-					<ul>
-						<li>
-							<p class="grey-out">What kind
-								of multimodal
-								datasets exist?</p>
-						</li>
-						<li data-id="question2" class="grow">
-							<p>What tasks do they contain?</p>
-						</li>
-						<li class="grey-out">
-							<p>How are they created?</p>
-						</li>
-						<li class="grey-out">
-							<p>Which data mixtures are recommended?</p>
-						</li>
-						<li class="grey-out">
-							<p>What's ahead?</p>
-						</li>
-					</ul>
+
+					<h1 data-id="fine">Pretraining Datasets</h1>
+
+					<div class="container">
+
+						<div class="col">
+							<img src="pictures/OBELICS_IDEFICS.png" width="450" height="450" />
+						</div>
+
+						<div class="col">
+							<ul>
+								<li>
+									<p>OBELICS</p>
+								</li>
+								<li>
+									<p>115B Text tokens 353M Images</p>
+								</li>
+								<li>
+									<p data-id="Interleaved">Interleaved image-text web documents</p>
+								</li>
+
+							</ul>
+						</div>
+					</div>
 				</section>
 
 				<section data-auto-animate>
-					<p data-id="question2" style="font-size: 77px;">
-						What tasks do they contain?
-					</p>
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="task">Image Captioning</h2>
-					<img src="pictures/image_captioning.png" width="685" height="288" />
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="task">OCR (Optical Character Recognition)</h2>
-					<img src="pictures/OCR.png" width="602" height="360" />
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="task">VQA (Visual Question Answering)</h2>
-					<img src="pictures/VQA.jpg" width="900" height="506" />
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="task">And many more....</h2>
-					<ul>
-						<li>
-							<p>Visual Commonsense Reasoning (VCR)</p>
-						</li>
-						<aside class="notes">
-							Predicting answers to questions that require reasoning about the relationships between
-							visual
-							and textual elements in an image.
-						</aside>
-						<li>
-							<p>Image-Text Matching</p>
-						</li>
-						<aside class="notes">
-							Determining if a given image and a textual description correspond to each other.
-						</aside>
-						<li>
-							<p>Multimodal Sentiment Analysis</p>
-						</li>
-						<aside class="notes">
-							Analyzing and classifying the sentiment expressed in both image and text.
-						</aside>
-						<li>
-							<p>Text-to-Image Generation</p>
-						</li>
-						<aside class="notes">
-							Generating an image based on a textual description.
-						</aside>
-						<li>
-							<p>Multimodal Fake News Detection</p>
-						</li>
-						<aside class="notes">
-							Detecting false information by analyzing text and associated images for inconsistencies or
-							manipulations.
-						</aside>
-					</ul>
-				</section>
-
-				<section data-auto-animate>
+					<p data-id="Interleaved">Interleaved Image-Text</p>
 					<style>
-						.grow {
-							transform: scale(1);
-							transition: transform 1.3s ease-in-out;
+						.container {
+							display: flex;
 						}
 
-						.reveal .present .grow {
-							transform: scale(1.4);
-						}
-
-						.grey-out {
-							color: rgb(77, 74, 74);
+						.col {
+							flex: 1;
 						}
 					</style>
-					<ul>
 
-					</ul>
+					<div class="container">
+
+						<div class="col">
+							<img src="pictures/Interleaved.png" width="450" height="450" />
+						</div>
+
+						<div class="col">
+							<ul>
+								<li>
+									<p> capture visual-textual associations within context of documents</p>
+								</li>
+								<li>
+									<p> Efficient Learning with Less Data</p>
+								</li>
+							</ul>
+						</div>
+						<aside class="notes">
+							longer text passages
+
+							Competitive Benchmarking: IDEFICS
+					</div>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
 					<li>
 						<p class="grey-out">What kind
 							of multimodal
 							datasets exist?</p>
 					</li>
-					<li data-id="question2" class="grey-out">
+					<li data-id="question2" class="grow">
 						<p>What tasks do they contain?</p>
 					</li>
-					<li data-id="question3" class="grow">
+					<li class="grey-out">
 						<p>How are they created?</p>
 					</li>
 					<li class="grey-out">
@@ -424,463 +324,558 @@
 					<li class="grey-out">
 						<p>What's ahead?</p>
 					</li>
-					<ul>
+				</ul>
+			</section>
 
-					</ul>
-				</section>
+			<section data-auto-animate>
+				<p data-id="question2" style="font-size: 77px;">
+					What tasks do they contain?
+				</p>
+			</section>
 
-				<section data-auto-animate>
-					<p data-id="question3" style="font-size: 77px;">How are they created?</p>
-				</section>
+			<section data-auto-animate>
+				<h2 data-id="task">Image Captioning</h2>
+				<img src="pictures/image_captioning.png" width="685" height="288" />
+			</section>
 
+			<section data-auto-animate>
+				<h2 data-id="task">OCR (Optical Character Recognition)</h2>
+				<img src="pictures/OCR.png" width="602" height="360" />
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="task">VQA (Visual Question Answering)</h2>
+				<img src="pictures/VQA.jpg" width="900" height="506" />
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="task">And many more....</h2>
+				<ul>
+					<li>
+						<p>Visual Commonsense Reasoning (VCR)</p>
+					</li>
+					<aside class="notes">
+						Predicting answers to questions that require reasoning about the relationships between
+						visual
+						and textual elements in an image.
+					</aside>
+					<li>
+						<p>Image-Text Matching</p>
+					</li>
+					<aside class="notes">
+						Determining if a given image and a textual description correspond to each other.
+					</aside>
+					<li>
+						<p>Multimodal Sentiment Analysis</p>
+					</li>
+					<aside class="notes">
+						Analyzing and classifying the sentiment expressed in both image and text.
+					</aside>
+					<li>
+						<p>Text-to-Image Generation</p>
+					</li>
+					<aside class="notes">
+						Generating an image based on a textual description.
+					</aside>
+					<li>
+						<p>Multimodal Fake News Detection</p>
+					</li>
+					<aside class="notes">
+						Detecting false information by analyzing text and associated images for inconsistencies or
+						manipulations.
+					</aside>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+				</ul>
+				<li>
+					<p class="grey-out">What kind
+						of multimodal
+						datasets exist?</p>
+				</li>
+				<li data-id="question2" class="grey-out">
+					<p>What tasks do they contain?</p>
+				</li>
+				<li data-id="question3" class="grow">
+					<p>How are they created?</p>
+				</li>
+				<li class="grey-out">
+					<p>Which data mixtures are recommended?</p>
+				</li>
+				<li class="grey-out">
+					<p>What's ahead?</p>
+				</li>
+				<ul>
+
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 77px;">How are they created?</p>
+			</section>
+
+			<section data-auto-animate>
+				<h1>Synthetic</h1>
+			</section>
+			<section>
 				<section data-auto-animate>
 					<h1>Synthetic</h1>
+					<h1 data-id="crawled">Crawled</h1>
 				</section>
-				<section>
-					<section data-auto-animate>
-						<h1>Synthetic</h1>
-						<h1 data-id="crawled">Crawled</h1>
-					</section>
-				</section>
+			</section>
 
-				<section data-auto-animate>
-					<h1 data-id="crawled">Crawled Data</h1>
-					<ul>
-						<li>
-							Information collected by web crawlers
-						</li>
-						<li>
-							Different Scope and Type of Data
-							<ul>
-								<li>Common Crawl</li>
-								<li>Specialized Crawls</li>
-								<li>Focused Crawls</li>
-								<li>Vertical Crawls</li>
-								<li>Real-Time Crawls</li>
-								<li>And many more</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<!-- Slide 1: Original View -->
-				<section data-auto-animate>
-					<h1 data-id="crawled">Crawled Data</h2>
-						<p>Example: OBELICS</p>
-						<div id="zoom-target">
-							<!-- Some visual element to zoom into -->
-							<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="800px">
-						</div>
-				</section>
-
-				<!-- Slide 2: Zoomed-In View -->
-				<section data-transition="zoom-in fade-out" data-auto-animate>
-					<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
-					<p>simplified Version</p>
-					<img src="pictures/DomTree.jpg" alt="Dom_Tree" width="1000px" height="500px">
-				</section>
-
-				<!-- Slide 3: Zoomed-In View -->
-				<section data-auto-animate>
-					<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
-					<img src="pictures/Dom-Tree_cleaned.jpg" alt="Dom_Tree_cleaned" width="1000px" height="500px">
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="Result_Data">Crawled</h2>
+			<section data-auto-animate>
+				<h1 data-id="crawled">Crawled Data</h1>
+				<ul>
+					<li>
+						Information collected by web crawlers
+					</li>
+					<li>
+						Different Scope and Type of Data
+						<ul>
+							<li>Common Crawl</li>
+							<li>Specialized Crawls</li>
+							<li>Focused Crawls</li>
+							<li>Vertical Crawls</li>
+							<li>Real-Time Crawls</li>
+							<li>And many more</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<!-- Slide 1: Original View -->
+			<section data-auto-animate>
+				<h1 data-id="crawled">Crawled Data</h2>
 					<p>Example: OBELICS</p>
-					<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="600px">
-					<p class="fragment">0.3% of Docs left... but Quantity ≠ Quality</p>
-
-					<aside class="notes">
-						Longer Training Times
-					</aside>
-
-				</section>
-
-				<section data-auto-animate>
-					<h2 data-id="Result_Data">Resulting Data</h2>
-					<style>
-						.container {
-							display: flex;
-						}
-
-						.col {
-							flex: 1;
-						}
-					</style>
-
-					<div class="container">
-						<div class="col">
-							<img src="pictures/Interleaved.png" width="450" height="450" />
-						</div>
-
-						<div class="col">
-							<img src="pictures/Image-text_pair.png" width="450" height="450" />
-						</div>
+					<div id="zoom-target">
+						<!-- Some visual element to zoom into -->
+						<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="800px">
 					</div>
+			</section>
+
+			<!-- Slide 2: Zoomed-In View -->
+			<section data-transition="zoom-in fade-out" data-auto-animate>
+				<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
+				<p>simplified Version</p>
+				<img src="pictures/DomTree.jpg" alt="Dom_Tree" width="1000px" height="500px">
+			</section>
+
+			<!-- Slide 3: Zoomed-In View -->
+			<section data-auto-animate>
+				<h2 data-id="Dom_Tree_Cleaner">Dom Tree</h2>
+				<img src="pictures/Dom-Tree_cleaned.jpg" alt="Dom_Tree_cleaned" width="1000px" height="500px">
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="Result_Data">Crawled</h2>
+				<p>Example: OBELICS</p>
+				<img src="pictures/CommonCrawl.png" alt="CommonCrawl" width="600px">
+				<p class="fragment">0.3% of Docs left... but Quantity ≠ Quality</p>
+
+				<aside class="notes">
+					Longer Training Times
+				</aside>
+
+			</section>
+
+			<section data-auto-animate>
+				<h2 data-id="Result_Data">Resulting Data</h2>
+				<style>
+					.container {
+						display: flex;
+					}
+
+					.col {
+						flex: 1;
+					}
+				</style>
+
+				<div class="container">
+					<div class="col">
+						<img src="pictures/Interleaved.png" width="450" height="450" />
+					</div>
+
+					<div class="col">
+						<img src="pictures/Image-text_pair.png" width="450" height="450" />
+					</div>
+				</div>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="Result_Data">Synthetic Data</h1>
+				<ul>
+					<li>
+						Artificially generated collection of data
+					</li>
+					<li>
+						Achieves more control over Data Characteristics
+					</li>
+					<li>
+						Scalability and Cost Efficiency
+					</li>
+					<li>
+						Challenges with Data Realism
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					<h1 data-id="Result_Data">re-captioning</h1>
+					<p>VeClip</p>
+					<img src="pictures/VeCap-Prozess.png" alt="VeCap-Prozess">
 				</section>
 
 				<section data-auto-animate>
-					<h1 data-id="Result_Data">Synthetic Data</h1>
-					<ul>
-						<li>
-							Artificially generated collection of data
-						</li>
-						<li>
-							Achieves more control over Data Characteristics
-						</li>
-						<li>
-							Scalability and Cost Efficiency
-						</li>
-						<li>
-							Challenges with Data Realism
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<section data-auto-animate>
-						<h1 data-id="Result_Data">re-captioning</h1>
-						<p>VeClip</p>
-						<img src="pictures/VeCap-Prozess.png" alt="VeCap-Prozess">
-					</section>
-
-					<section data-auto-animate>
-						<h1 data-id="Result_Data">re-captioning</h1>
-						<ol>
-							<li>
-								<p>VeCLIP achieves up to +25.2% gains on benchmarks like COCO and Flickr30k</p>
-							</li>
-							<li>
-								<p>Better scalability and cost-effectiveness</p>
-							</li>
-							<li>
-								<p>Enhanced Diversity</p>
-							</li>
-						</ol>
-
-						<aside class="notes">
-							build for 300M scale
-
-							Alternating between original and enriched
-							captions during training prevents overfitting
-							to uniform caption styles and maintains dataset diversity.
-						</aside>
-						<aside class="notes">
-							Homogenized Style
-							Over-reliance on Rewritten Captions
-						</aside>
-					</section>
-				</section>
-
-				<section data-auto-animate>
-					<h1 data-id="Result_Data">VQA</h1>
-					<h2 data-id="exmaple">Example: MMEvol with SEED-163K</p>
-						<div id="zoom-target">
-							<!-- Some visual element to zoom into -->
-							<img src="pictures/evo_example_page-0001.jpg" alt="CommonCrawl" width="600px">
-						</div>
-				</section>
-
-				<!-- Slide 2: Zoomed-In View -->
-				<section data-transition="zoom-in fade-out" data-auto-animate>
-
-					<img src="pictures/data_analysis_1_page-0001.jpg" width="380" height="300" />
-					<img src="pictures/obj_dist.jpg" alt="long tailed">
-					<aside class="notes">
-						Increased complexity
-
-						Can introduce noise of VQA are syntheticly created
-
-						long-tailed distrubutiont
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<style>
-						.grow {
-							transform: scale(1);
-							transition: transform 1.3s ease-in-out;
-						}
-
-						.reveal .present .grow {
-							transform: scale(1.4);
-						}
-
-						.grey-out {
-							color: rgb(77, 74, 74);
-						}
-					</style>
-					<ul>
-
-						<li>
-							<p class="grey-out">What kind
-								of multimodal
-								datasets exist?</p>
-						</li>
-						<li class="grey-out">
-							<p>What tasks do they contain?</p>
-						</li>
-						<li class="grey-out">
-							<p>How are they created?</p>
-						</li>
-						<li data-id="question3" class="grow">
-							<p>Which data mixtures are recommended?</p>
-						</li>
-						<li class="grey-out">
-							<p>How to evaluate your dataset?</p>
-						</li>
-
-					</ul>
-				</section>
-
-				<section data-auto-animate>
-					<p data-id="question3" style="font-size: 50px;">Ratio interleaved and captioned data</p>
-					<img src="pictures/caption_interleaved_mixing.png" alt="4 tabels on mixture" width="499"
-						height="352">
+					<h1 data-id="Result_Data">re-captioning</h1>
 					<ol>
 						<li>
-							<p style="font-size: 36px;">
-								Interleaved data helps few-shot and text-only performance.
-							</p>
+							<p>VeCLIP achieves up to +25.2% gains on benchmarks like COCO and Flickr30k</p>
 						</li>
 						<li>
-							<p style="font-size: 36px;">
-								Captioning data lifts zero-shot performance
-							</p>
+							<p>Better scalability and cost-effectiveness</p>
+						</li>
+						<li>
+							<p>Enhanced Diversity</p>
 						</li>
 					</ol>
+
 					<aside class="notes">
+						build for 300M scale
+
+						Alternating between original and enriched
+						captions during training prevents overfitting
+						to uniform caption styles and maintains dataset diversity.
+					</aside>
+					<aside class="notes">
+						Homogenized Style
+						Over-reliance on Rewritten Captions
+					</aside>
+				</section>
+			</section>
+
+			<section data-auto-animate>
+				<h1 data-id="Result_Data">VQA</h1>
+				<h2 data-id="exmaple">Example: MMEvol with SEED-163K</p>
+					<div id="zoom-target">
+
+						<img src="pictures/evo_example_page-0001.jpg" alt="CommonCrawl" width="600px">
+					</div>
+			</section>
+
+
+			<section data-transition="zoom-in fade-out" data-auto-animate>
+
+				<img src="pictures/data_analysis_1_page-0001.jpg" width="380" height="300" />
+				<img src="pictures/obj_dist.jpg" alt="long tailed">
+				<aside class="notes">
+					Increased complexity
+
+					Can introduce noise of VQA are syntheticly created
+
+					long-tailed distrubutiont
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+					<li>
+						<p class="grey-out">What kind
+							of multimodal
+							datasets exist?</p>
+					</li>
+					<li class="grey-out">
+						<p>What tasks do they contain?</p>
+					</li>
+					<li class="grey-out">
+						<p>How are they created?</p>
+					</li>
+					<li data-id="question3" class="grow">
+						<p>Which data mixtures are recommended?</p>
+					</li>
+					<li class="grey-out">
+						<p>How to evaluate your dataset?</p>
+					</li>
+
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 50px;">Ratio interleaved and captioned data</p>
+				<img src="pictures/caption_interleaved_mixing.png" alt="4 tabels on mixture" width="499" height="352">
+				<ol>
+					<li>
+						<p style="font-size: 36px;">
+							Interleaved data helps few-shot and text-only performance.
+						</p>
+					</li>
+					<li>
+						<p style="font-size: 36px;">
+							Captioning data lifts zero-shot performance
+						</p>
+					</li>
+				</ol>
+				<!-- <aside class="notes">
 						left is no interleaved right is no interleaved.
 						8 benchmarks
-					</aside>
-					<aside class="notes">
-						Since interleaved data similar few-shot test inputs
-					</aside>
-					<aside class="notes">
-						nature of common evaluation being
-						heavily tailored to captioning problems
-					</aside>
-					<aside class="notes">
-						text-only performance benefits from
-						interleaved data, likely as interleaved data contains long-form text
-					</aside>
-				</section>
+					</aside> -->
+				<aside class="notes">
+					Since interleaved data similar few-shot test inputs
+				</aside>
+				<aside class="notes">
+					heavily tailored to captioning problems
+				</aside>
+				<aside class="notes">
+					long-form text
+				</aside>
+			</section>
 
-				<section data-auto-animate>
-					<p data-id="question3" style="font-size: 50px;">Importance of Text-Only Data</p>
-					<img src="pictures/adding_text_data.png" alt="4 tabels on mixture" width="476" height="319">
-					<ol>
-						<li>
-							<p style="font-size: 36px;">
-								Text-only data helps with few-shot and text-only per-
-								formance
-							</p>
-						</li>
-					</ol>
-					<aside class="notes">
-						maintain the language under-
-						standing capabilities
-					</aside>
-					<!-- <aside class="notes">
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 50px;">Importance of Text-Only Data</p>
+				<img src="pictures/adding_text_data.png" alt="4 tabels on mixture" width="476" height="319">
+				<ol>
+					<li>
+						<p style="font-size: 36px;">
+							Text-only data helps with few-shot and text-only per-
+							formance
+						</p>
+					</li>
+				</ol>
+				<aside class="notes">
+					maintain the language under-
+					standing capabilities
+				</aside>
+				<!-- <aside class="notes">
 						utilize multiple image and text examples as context for caption data
 					</aside> -->
-				</section>
+			</section>
 
-				<section data-auto-animate>
-					<p data-id="question3" style="font-size: 50px;">Ratio Image- and Text-Only Data</p>
-					<img src="pictures/image_text_ratio.png" alt="4 tabels on mixture" width="398" height="292">
-					<ol>
-						<li>
-							<p style="font-size: 36px;">
-								caption/interleaved/text ratio 5:5:1
-								for multimodal performance and
-								comparable text-only performance.
-							</p>
-						</li>
-					</ol>
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 50px;">Ratio Image- and Text-Only Data</p>
+				<img src="pictures/image_text_ratio.png" alt="4 tabels on mixture" width="398" height="292">
+				<ol>
+					<li>
+						<p style="font-size: 36px;">
+							caption/interleaved/text ratio 5:5:1
+							for multimodal performance and
+							comparable text-only performance.
+						</p>
+					</li>
+				</ol>
+				<aside class="notes">
+					45% / 45% / 5%
+				</aside>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question3" style="font-size: 50px;">Adding synthetic caption data</p>
+				<img src="pictures/VeCap.png" alt="4 tabels on mixture" width="398" height="292">
+				<ol>
+					<li>
+						<p style="font-size: 36px;">
+							higher quality, but only 7% of the size compared to all caption data
+						</p>
+					</li>
+					<li>
+						<p style="font-size: 36px;">
+							Increased few-shot performance
+						</p>
+					</li>
+				</ol>
+			</section>
+
+
+			<section data-auto-animate>
+				<style>
+					.grow {
+						transform: scale(1);
+						transition: transform 1.3s ease-in-out;
+					}
+
+					.reveal .present .grow {
+						transform: scale(1.4);
+					}
+
+					.grey-out {
+						color: rgb(77, 74, 74);
+					}
+				</style>
+				<ul>
+
+					<li>
+						<p class="grey-out">What kind
+							of multimodal
+							datasets exist?</p>
+					</li>
+					<li class="grey-out">
+						<p>What tasks do they contain?</p>
+					</li>
+					<li class="grey-out">
+						<p>How are they created?</p>
+					</li>
+					<li class="grey-out">
+						<p>Which data mixtures are recommended?</p>
+					</li>
+					<li class="grow" data-id="question4">
+						<p>What's ahead?</p>
+					</li>
+				</ul>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 77px;">What's ahead?</p>
+			</section>
+
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 70px;">What's ahead?</p>
+				<p><u>Unsolved Problems</u></p>
+				<ul>
+					<li>
+						<p>Data Storage and Sharing</p>
+					</li>
 					<aside class="notes">
-						45% / 45% / 5%
+						bigger datasets
+						higher resolutions
 					</aside>
-				</section>
+					<li>
+						<p>Modeling</p>
+					</li>
+					<li>
+						<p>Data Privacy</p>
+					</li>
+				</ul>
+			</section>
 
-				<section data-auto-animate>
-					<p data-id="question3" style="font-size: 50px;">Adding synthetic caption data</p>
-					<img src="pictures/VeCap.png" alt="4 tabels on mixture" width="398" height="292">
-					<ol>
-						<li>
-							<p style="font-size: 36px;">
-								higher quality, but only 7% of the size compared to all caption data
-							</p>
-						</li>
-						<li>
-							<p style="font-size: 36px;">
-								Increased few-shot performance
-							</p>
-						</li>
-					</ol>
-				</section>
-
-
-				<section data-auto-animate>
-					<style>
-						.grow {
-							transform: scale(1);
-							transition: transform 1.3s ease-in-out;
-						}
-
-						.reveal .present .grow {
-							transform: scale(1.4);
-						}
-
-						.grey-out {
-							color: rgb(77, 74, 74);
-						}
-					</style>
-					<ul>
-
-						<li>
-							<p class="grey-out">What kind
-								of multimodal
-								datasets exist?</p>
-						</li>
-						<li class="grey-out">
-							<p>What tasks do they contain?</p>
-						</li>
-						<li class="grey-out">
-							<p>How are they created?</p>
-						</li>
-						<li class="grey-out">
-							<p>Which data mixtures are recommended?</p>
-						</li>
-						<li class="grow" data-id="question4">
-							<p>What's ahead?</p>
-						</li>
-					</ul>
-				</section>
-
-				<section data-auto-animate>
-					<p data-id="question4" style="font-size: 77px;">What's ahead?</p>
-				</section>
-
-				<section data-auto-animate>
-					<p data-id="question4" style="font-size: 70px;">What's ahead?</p>
-					<p><u>Unsolved Problems</u></p>
-					<ul>
-						<li>
-							<p>Data Storage and Sharing</p>
-						</li>
-						<aside class="notes">
-							bigger datasets
-							higher resolutions
-						</aside>
-						<li>
-							<p>Modeling</p>
-						</li>
-						<li>
-							<p>Data Privacy</p>
-						</li>
-					</ul>
-				</section>
-
-				<section data-auto-animate>
-					<p data-id="question4" style="font-size: 50px;">Data Storage and Sharing</p>
-					<ul>
-						<li>
-							Cross Modal Compression
-							<ul>
-								<li>
-									human-comprehensible semantic compression
-									<img src="pictures/CMC.png" alt="4 tabels on mixture" width="1158" height="265">
-								</li>
-							</ul>
-						</li>
-						<li>
-							Raw data to no follow codec
-						</li>
-						<aside class="notes">
-							worsens storage issues
-						</aside>
-					</ul>
-				</section>
-
-				<section data-auto-animate>
-					<p data-id="question4" style="font-size: 50px;">Modeling</p>
-					<ul>
-						<li>
-							Combining datasets
-							<ul>
-								<li>Heterogeneity in Data Types</li>
-								<li>Bias and Fragmentation</li>
-								<aside class="notes"> because they are now frequently used</aside>
-								<li>Data Privacy and Security</li>
-								<aside class="notes">cross-referencing</aside>
-							</ul>
-						</li>
-						<li>
-							MINDS-pipeline by Aakash Tripathi
-						</li>
-						<aside class="aside">Multimodal Integration of Oncology Data System</aside>
-					</ul>
-				</section>
-
-				<section>
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 50px;">Data Storage and Sharing</p>
+				<ul>
+					<li>
+						Cross Modal Compression
+						<ul>
+							<li>
+								human-comprehensible semantic compression
+								<img src="pictures/CMC.png" alt="4 tabels on mixture" width="1158" height="265">
+							</li>
+						</ul>
+					</li>
+					<li>
+						Raw data to no follow codec
+					</li>
 					<aside class="notes">
-						persons participate in multiple datasets and can be identified through
-						cross-referencing
+						worsens storage issues
 					</aside>
-					<p data-id="question4" style="font-size: 50px;">Data Privacy</p>
-					<ul>
-						<li>
-							Reverse engineering of synthetic Data
-						</li>
-						<li>
-							Identification through cross-referencing
-						</li>
-						<li>
-							Watermarking or Freeze image of training environment
-						</li>
-					</ul>
-				</section>
+				</ul>
+			</section>
 
-				<section>
-					<p style="font-size: 20px;">Image Sources</p>
-					<p style="font-size: 8px;">pictures/CheXpert.webp:
-						https://neurohive.io/wp-content/uploads/2019/01/Screenshot-from-2019-01-26-01-23-30-e1548692699126.png
-					</p>
-					<p style="font-size: 8px;">pictures/CommonCrawl.png: Laurencon et. al.,2023 </p>
-					<p style="font-size: 8px;">pictures/data_analysis_1_page-0001.jpg: Run Luo et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/Docamtix.webp:
-						https://cdn-uploads.huggingface.co/production/uploads/65d66b494bbd0d92b641cdbb/P7rIELr2eom_IorBY5DZu.webp
-					</p>
-					<p style="font-size: 8px;">pictures/DomTree.jpg:
-						https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ-MKM46vAw9Ypb5rCryyi_Mp1bcqO9C5pqk6VBbEeEB1T5cFfy
-					</p>
-					<p style="font-size: 8px;">pictures/evo_example_page-0001.jpg: Run Luo et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/evolved_data.png: Run Luo et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/image_captioning.png:
-						https://miro.medium.com/v2/resize:fit:685/1*UDOnzqoTnWUQoPP8pZUXgQ.png</p>
-					<p style="font-size: 8px;">pictures/Instruction_Tuning.png: Jason Wei et. al.,2021</p>
-					<p style="font-size: 8px;">pictures/Interleaved.png: Laurencon et. al.,2023</p>
-					<p style="font-size: 8px;">pictures/Laion.jpg:
-						https://dataphoenix.info/content/images/2024/09/laion-blue-opt-1920.WEBP</p>
-					<p style="font-size: 8px;">pictures/mixture_the_cauldron.png: Laurencon et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/OBELICS_IDEFICS.png: Laurencon et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/OCR.png:
-						https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSK3gnJ3IsiUl3BFa3vaSzWGfpzTJsvZ5k2rVnGKlu6DaUY7xNZ
-					</p>
-					<p style="font-size: 8px;">pictures/pipeline_page-0001.jpg: Qingyun Li et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/subject_dist.jpg: Qingyun Li et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/SEED-163K.png: Run Luo et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/obj_dist: Run Luo et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/VQA.jpg:
-						https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT41pCo0OaqEYeaYOWhQ4601R-yPlzYh4muWNz_G-i_wlL2X2lq
-					</p>
-					<p style="font-size: 8px;">pictures/image_quality.png: Brandon McKinzie et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/4_table_mixture.png: Brandon McKinzie et. al.,2024</p>
-					<p style="font-size: 8px;">pictures/Ve-Cap-Prozess: Zhengfeng Lai et. al.,2023</p>
-					<p style="font-size: 8px;">pictures/CMC.png Jiguo Li et. al, 2021</p>
-				</section>
+			<section data-auto-animate>
+				<p data-id="question4" style="font-size: 50px;">Modeling</p>
+				<ul>
+					<li>
+						Combining datasets
+						<ul>
+							<li>Heterogeneity in Data Types</li>
+							<li>Bias and Fragmentation</li>
+							<aside class="notes"> because they are now frequently used</aside>
+							<li>Data Privacy and Security</li>
+							<aside class="notes">cross-referencing</aside>
+						</ul>
+					</li>
+					<li>
+						MINDS-pipeline by Aakash Tripathi
+					</li>
+					<aside class="aside">Multimodal Integration of Oncology Data System</aside>
+				</ul>
+			</section>
+
+			<section>
+				<aside class="notes">
+					persons participate in multiple datasets and can be identified through
+					cross-referencing
+				</aside>
+				<p data-id="question4" style="font-size: 50px;">Data Privacy</p>
+				<ul>
+					<li>
+						Reverse engineering of synthetic Data
+					</li>
+					<li>
+						Identification through cross-referencing
+					</li>
+					<li>
+						Watermarking or Freeze image of training environment
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<p style="font-size: 20px;">Image Sources</p>
+				<p style="font-size: 8px;">pictures/CheXpert.webp:
+					https://neurohive.io/wp-content/uploads/2019/01/Screenshot-from-2019-01-26-01-23-30-e1548692699126.png
+				</p>
+				<p style="font-size: 8px;">pictures/CommonCrawl.png: Laurencon et. al.,2023 </p>
+				<p style="font-size: 8px;">pictures/data_analysis_1_page-0001.jpg: Run Luo et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/Docamtix.webp:
+					https://cdn-uploads.huggingface.co/production/uploads/65d66b494bbd0d92b641cdbb/P7rIELr2eom_IorBY5DZu.webp
+				</p>
+				<p style="font-size: 8px;">pictures/DomTree.jpg:
+					https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ-MKM46vAw9Ypb5rCryyi_Mp1bcqO9C5pqk6VBbEeEB1T5cFfy
+				</p>
+				<p style="font-size: 8px;">pictures/evo_example_page-0001.jpg: Run Luo et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/evolved_data.png: Run Luo et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/image_captioning.png:
+					https://miro.medium.com/v2/resize:fit:685/1*UDOnzqoTnWUQoPP8pZUXgQ.png</p>
+				<p style="font-size: 8px;">pictures/Instruction_Tuning.png: Jason Wei et. al.,2021</p>
+				<p style="font-size: 8px;">pictures/Interleaved.png: Laurencon et. al.,2023</p>
+				<p style="font-size: 8px;">pictures/Laion.jpg:
+					https://dataphoenix.info/content/images/2024/09/laion-blue-opt-1920.WEBP</p>
+				<p style="font-size: 8px;">pictures/mixture_the_cauldron.png: Laurencon et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/OBELICS_IDEFICS.png: Laurencon et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/OCR.png:
+					https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSK3gnJ3IsiUl3BFa3vaSzWGfpzTJsvZ5k2rVnGKlu6DaUY7xNZ
+				</p>
+				<p style="font-size: 8px;">pictures/pipeline_page-0001.jpg: Qingyun Li et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/subject_dist.jpg: Qingyun Li et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/SEED-163K.png: Run Luo et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/obj_dist: Run Luo et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/VQA.jpg:
+					https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT41pCo0OaqEYeaYOWhQ4601R-yPlzYh4muWNz_G-i_wlL2X2lq
+				</p>
+				<p style="font-size: 8px;">pictures/image_quality.png: Brandon McKinzie et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/4_table_mixture.png: Brandon McKinzie et. al.,2024</p>
+				<p style="font-size: 8px;">pictures/Ve-Cap-Prozess: Zhengfeng Lai et. al.,2023</p>
+				<p style="font-size: 8px;">pictures/CMC.png Jiguo Li et. al, 2021</p>
+			</section>
 
 		</div>
 	</div>
